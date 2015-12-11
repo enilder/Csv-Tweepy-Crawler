@@ -3,16 +3,17 @@ from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 import time
 import json
+import csv
 
 """
 Get all the access info from the twitter api authorization site
 *******   https://api.twitter.com/oauth/authenticate  *****
 """
 
-client_key = 'Ol4CaaKvncVaqagU5fwNuUtmP'
-client_secret = 'fKtVn27IcC5hdyXlzV3AkwvTz5OR7yTTiYwoEAvCiW16LbpNPW'
-access_token = '3071288117-2ck4xfoRSKOyhELosqONKYcB9OtahMQjeta0pSi'
-access_secret = 'pb8VyNovCnURqQnDxdznMgU6F10KCy1DWnbrEVRW7XLZk'
+client_key = ''
+client_secret = ''
+access_token = ''
+access_secret = ''
 
 class listener(StreamListener):
 	def on_data(self, data):
@@ -45,4 +46,4 @@ class listener(StreamListener):
 auth = OAuthHandler(client_key, client_secret)
 auth.set_access_token(access_token, access_secret)
 twitterStream = Stream(auth, listener())
-twitterStream.filter(track=["refugees"])
+twitterStream.filter(track=["enter search terms here"])
