@@ -19,7 +19,6 @@ class listener(StreamListener):
 	def on_data(self, data):
 		try:
 			# print data
-			
 			jsontweet = json.loads(data)
 			tweetdata = jsontweet
 			print jsontweet
